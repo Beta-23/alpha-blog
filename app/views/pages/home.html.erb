@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Ruby | Website</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+i {
+  font-family: "Lucida Console", Monaco, monospace;
+  text-align: center;
+}
+
+p {
+  font-family: "Courier New", Courier, monospace;
+}
+
+h3, article {
+  text-align: left;
+  padding: 14px 30px;
+}
+
+h2 {
+  text-align: center;
+
+  }
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}  
+
+li {
+  list-style-type:square;
+
+}
+
+#a {
+  padding: 10px 40px;
+}
+
+iframe {
+  padding: 10px 50px;
+  
+}
+
+
+/* Style the header */
+.header {
+   background: #2e3192; background: -moz-linear-gradient(to bottom, #2e3192 1%, #1bffff 100%); background: -webkit-linear-gradient(to bottom, #2e3192 1%, #1bffff 100%); background: linear-gradient(to bottom, #2e3192 1%, #1bffff 100%);
+    text-align: left;
+    padding: 14px 50px;
+    color: white;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #334;
+    box-shadow:10px 5px 5px #29ABE2;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #1bffff;
+    color: black;
+
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+footer {
+ background: #7bf1f0; background: -moz-linear-gradient(to right,  #7bf1f0 0%,#7bb8f1 100%); background: -webkit-linear-gradient(to right,  #7bf1f0 0%,#7bb8f1 100%); background: linear-gradient(to right,  #7bf1f0 0%,#7bb8f1 100%);
+    padding: 10px;
+    text-align: center;
+    color: black;
+}
+
+#image {
+     padding: 10px 600px;
+     margin-top: 4em;
+     
+}
+</style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Ruby is Awesome!</h1>
+    <p><i id="quote">"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."</i></p>
+  </div>
+
+  <div class="topnav">
+    <%= link_to 'About', about_path %>
+    <!--<a href="#Community">Blog</a>-->
+    <!--<a href="#Projects">About</a>-->
+    <!--<a href="#MyStory">My Story</a>-->
+  </div>
+  
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/zppMfm4fuxM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+  
+<!--  <video controls>-->
+<!--    <source src="example.mp4" type="video/mp4">-->
+<!--    <source src="example.webm" type="video/webm">-->
+<!--    <track kind="subtitles" src="subtitles_en.vtt" srclang="en">-->
+<!--</video>-->
+
+<div class="row">
+  <div class="column">
+    <h2>Application:</h2>
+      <ol> 
+        <li>FILLERATI</li>
+        <li>FILLERAMA</li>
+        <li>BLIND TEXT</li>
+        <li>LIPSUM</li>
+        <li>CUPCAKE IPSUM</li>
+      </ol> 
+  </div>
+
+  <div class="column">
+    <h2>Our Topics:</h2>
+      <ol> 
+        <li>HODOR IPSUM</li>
+        <li>BATMAN IPSUM</li>
+        <li>CAT IPSUM</li>
+        <li>RANDOM TEXT</li>
+      </ol>
+  </div>
+</div>
+<hr />
+<br />
+<br /><br /><br /><br /><br /><br /><br /><br />
+<footer>
+  <h5>This is my HOME blog page! Working!!!!</h5> 
+  <p>Copyright&copy; 2018</p>
+</footer>
+</body>
+</html>
+
+
