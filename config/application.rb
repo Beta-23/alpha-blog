@@ -6,6 +6,9 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# config/application.rb
+config.assets.initialize_on_precompile = false
+
 
 module AlphaBlog
   class Application < Rails::Application
@@ -21,7 +24,8 @@ module AlphaBlog
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     # config/application.rb
-    config.assets.initialize_on_precompile = false
+    
+    
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
