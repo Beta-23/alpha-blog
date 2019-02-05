@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   root 'pages#home'
   
   get'about', to: 'pages#about'
+  
+  #resources -Provides a new_article path; a POST to create article; an edit_article path; a DELETE article path; a show article path and index article path.
+  resources :articles
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
