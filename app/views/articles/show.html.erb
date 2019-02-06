@@ -1,10 +1,22 @@
-<h1>Posted Articles!</h1
+<h1>Show Posted Articles!</h1
+
+<p><%= link_to "Create a new article", new_article_path %></p>
 
 <p>
-  Titiel: <%= @article.title %>
+  Title: <%= @article.title %>
 </p> <br />
 
 <p>
   Description: <%= @article.description %>
 </p>
+
+<p><%= link_to "Edit Above", edit_article_path(@article) %></p>
+
+<p><%= link_to "Back to Archived Articles", articles_path %></p>
+
+
+
+
+
+
 

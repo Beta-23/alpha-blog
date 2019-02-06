@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   
   get'about', to: 'pages#about'
   
-  #resources -Provides a new_article path; a POST to create article; an edit_article path; a DELETE article path; a show article path and index article path.
+  #resources -provides a new_article path; a POST to create article; an edit_article path; a DELETE article path; a show article path and index article path.
   resources :articles
 
   # Example of regular route:
