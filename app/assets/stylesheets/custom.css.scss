@@ -1,3 +1,134 @@
+//Navigation bar background color
+$navbar-default-bg: #7cedff;
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+  float: right;
+  font-size: 1.7em;
+  color: #e91e63;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #4a148c;
+  text-decoration: none;
+}
+
+#quote {
+  position:absolute;  // absolutely positioned
+  transition: .5s ease;
+  top: 27%;  // Makes vertical center
+  left: 11%;
+  font-size: 1.4em;
+  color: #3c065b;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.fa {
+  float: left;
+  font-size:36px;
+  color: #e91e63;
+}
+
+.fa:hover {
+  color: #4a148c;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+  
+}
+
+.jumbotron {
+  background-image: asset-url('new_cover.jpg');
+  background-size: cover;
+  height: 550px;
+}
+
+.jumbotron h1 {
+  position:absolute;  // absolutely positioned
+  transition: .5s ease;
+  top: 11%;  // Makes vertical center
+  left: 19%;
+  letter-spacing: -1px;
+  font-weight: bold;
+  color: #e91e63;
+  text-align: center;
+  margin-bottom: 30px;
+  
+}
+
+.subscribe-btn{
+  position:absolute;  // absolutely positioned
+  transition: .5s ease;
+  top: 80%;  // Makes vertical center
+  left: 40%;
+  text-align: center;
+  letter-spacing: -1px;
+  
+}
+
+// .btn-xlarge {
+//   font-size: 1.7em;
+//   text-decoration: none !important;
+// }
+
+.gradient-button {
+    margin: 10px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 25px;
+    text-decoration: none !important;
+}
+.gradient-button:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 8px 10px 12px;
+}
+
+.gradient-button-4 {background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%)}
+.gradient-button-4:hover { background-position: right center; 
+  
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;  
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}

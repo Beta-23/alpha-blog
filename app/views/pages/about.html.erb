@@ -4,167 +4,21 @@
 <title>My Ruby | Website</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
 
-  body {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 10vw 30vw 10vw;
-  grid-gap: 1em;
-}
-
-header,
-footer {
-  grid-column: 1 / span 5;
-}
-
-main {
-  grid-column: 1 / span 3;
-}
-
-aside {
-  grid-column: span 2;
-}
-
-@media (max-width: 700px) {
-  
-  main,
-  aside {
-    grid-column: 1 / span 5;
-  }
-  
-}
-
-/* Demo Specific Styles */
-body {
-  margin: 0 auto;
-  max-width: 56em;
-  /*padding: 1em 0;*/
-}
-
-
-
-aside {
-  background: #eaeaea;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 10vw;
-  padding: 90px 10px;
-  margin: 100px 0px;
-  
-}
-
-main {
-  background: #eaeaea;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 10vw;
-  padding: 90px 10px;
-  margin: 100px 3px;
-}
-  
-  
-footer {
-  height: 10vw;
-  padding: 90px 10px;
-  margin: 100px 3px;
-}
-
-/* Style the header */
-.header {
-    background: #2cebc7; background: -moz-linear-gradient(225deg,  #2cebc7 0%,#8267d5 100%); background: -webkit-linear-gradient(225deg,  #2cebc7 0%,#8267d5 100%); background: linear-gradient(225deg,  #2cebc7 0%,#8267d5 100%);
-    text-align: left;
-    padding: 14px 50px;
-    color: white;
-}
-
-/* Style the top navigation bar */
-.topnav {
-    overflow: hidden;
-    background-color: #334;
-    box-shadow:10px 5px 5px #29ABE2;
-}
-
-/* Style the topnav links */
-.topnav a {
-    float: right;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: white;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-    background-color: #2cebc7;
-    color: black;
-
-}
-
-p {
-  font-family: "Courier New", Courier, monospace;
-  text-align: left;
-}
-
-h6 {
-  text-align: center;
-}
-  
-}
-
-h2, article {
-  text-align: center;
-}
-
-h3 {
-  text-decoration: underline;
-  text-align: left;
-  padding: 10px 10px;
-}
-
-li {
-  list-style-type:none;
-}
-
-i {
-  font-family: "Lucida Console", Monaco, monospace;
-  text-align: center;
-}
-
-#a {
-  padding: 10px 40px;
-}
-
-time {
-    font-weight: bold;
-    padding: 10px 10px;
-}
-
-footer {
- background: #7bf1f0; background: -moz-linear-gradient(to right,  #7bf1f0 0%,#7bb8f1 100%); background: -webkit-linear-gradient(to right,  #7bf1f0 0%,#7bb8f1 100%); background: linear-gradient(to right,  #7bf1f0 0%,#7bb8f1 100%);
-    padding: 10px;
-    text-align: center;
-    color: black;
-}
-</style>
 </head>
 
 <header>
-  <div class="header">
+  <div>
     <h1>About Ruby!</h1>
     <p><i id="quote">"Ruby is a dynamic, interpreted, reflective, object-oriented, general-purpose programming language."</i></p>
   </div>
-  <div class="topnav">
+  <div>
     <%= link_to 'Home', root_path %> | <%= link_to 'Alpha Blog', articles_path %>
   </div>
 </header>
 <main>
   <span>
-  <a id= "padding"></a>
+ 
 
   <h2>Blog</h2>
   <h3>Build an awsome App with Ruby!</h3>
@@ -186,10 +40,5 @@ footer {
   </ul>
   </span>
 </aside>
-<footer>
-  <h1>This is my ABOUT blog page! Working!!!!</h1>
-  <br />
-  <br />
-  <h6>Copyright&copy; 2018</h6>
-</footer>
+
 </html>
