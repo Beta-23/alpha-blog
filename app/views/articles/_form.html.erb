@@ -1,17 +1,9 @@
-  <% if @article.errors.any? %>
-  
-  <h3>The following errors prevented the article from being created!</h3>
-  <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li>
-        <%= msg %>
-      </li>
-    <% end %>
-  </ul>
-  <% end %>
+<%= render 'shared/errors', obj: @article %>
 
   <div class='row'> 
     <div class='col-xs-12'>
+      <!--This is a call to the form_for view helper with the instance variable representing the article object.-->
+      <!--The html hash has a key of :html and contains the set of attributes and their values which will be added to the form markup. The class of the form will be "form-horizontal" and the role will be "form".-->
       <%= form_for(@article, :html=> {class: "form-horizontal", role: "form"}) do |f| %>
         <div class='form-group'>
           <div class='control-label col-sm-2'>
