@@ -2,10 +2,12 @@
 
 This is the repo for the alpha-blog app project.
 
+[Alpha_Blog](https://alpha-blog-alfred.herokuapp.com/) 
+
 
 Languages:
 
-* Ruby
+* Ruby 2.3.4
 
 * Rails 5.2.1
 
