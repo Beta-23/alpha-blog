@@ -2,7 +2,7 @@
 
 This is the repo for the alpha-blog app project.
 
-<a href="https://alpha-blog-alfred.herokuapp.com" target="_blank">Alpha_Blog</a>
+https://alpha-blog-alfred.herokuapp.com
 
 
 Languages:
