@@ -19,6 +19,7 @@ class ArticlesController < ApplicationController
   #this method creates new article from params; creates flash msg and redirect or renders
   def create
     @article = Article.new(article_params)
+    @article.user = User.first
     if @article.save
       flash[:success] = "Article was created succesfully!"
       redirect_to article_path(@article)

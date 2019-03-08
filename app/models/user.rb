@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+#user ERD has many articles
+  has_many :articles
+#this method converts the user email in lowercase before hittig the database
+  before_save { self.email = email.downcase }
 # vlaidates database username, checks for unique username and checks for case sensitive username and gives min and max required
   validates :username, presence: true, 
             uniqueness: { case_sensitive: false }, 
