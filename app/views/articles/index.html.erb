@@ -14,8 +14,8 @@
             <div class= "article-meta-details">
               <small>
                 Created By: <%= article.user.username if article.user %>,
-                          <%= time_ago_in_words(article.created_at) %> ago,
-                Last Updated: <%= time_ago_in_words(article.updated_at) %> ago            
+                          <%= time_ago_in_words(article.created_at) %> ago | 
+                Last Updated: <%= time_ago_in_words(article.updated_at) %> ago.        
               </small>
             </div>  
         </div>
