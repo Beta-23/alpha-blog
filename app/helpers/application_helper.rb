@@ -1,4 +1,5 @@
 module ApplicationHelper
+  # users can showcase their gravatar img profile via helper
   def gravatar_for(user, options = { size: 80})
     gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
     size = options[:size]
