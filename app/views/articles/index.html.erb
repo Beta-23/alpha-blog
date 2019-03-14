@@ -1,5 +1,13 @@
 <h1 align="center"> Listing all Articles:</h1>
+  <div align="center">
+    <%= will_paginate %>
+  </div>
+  
+  <%= render 'article', obj: @articles %>
 
-<%= render 'article', obj: @articles %>
+  <div align="center">
+    <%= will_paginate %>
+  </div>
+
 
 
