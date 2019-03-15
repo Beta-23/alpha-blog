@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:edit, :update, :show]
   
   def index
     @users = User.paginate(page: params[:page], per_page: 5)
@@ -19,13 +20,10 @@ class UsersController < ApplicationController
   end
   
   def edit
-    @user = User.find(params[:id])
-    
   end
   
   def update
-    @user = User.find(params[:id])
-    if @user.update(user_params)
+    if @user = User.find(params[:id])
       flash[:success] = "Profile updated successfully!"
       redirect_to articles_path
       
@@ -35,7 +33,6 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.find(params[:id])
     # instance variable of all the users articles by using pagination
     @user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
   end
@@ -43,8 +40,10 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:username, :email, :password)
-  
   end
   
-  
+  def set_user
+    #instance variable that finds user by id and has ready for the before_action :set_user edit, update and show
+    @user = User.find(params[:id])
+  end
 end
