@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?
   
   def current_user
-    # Return user if session hash is present on browser, find user in database via user_id
+    # Return user object if session hash is present on browser, if not find user find user in database via user_id. 
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
   
@@ -17,9 +17,9 @@ class ApplicationController < ActionController::Base
   end
   
   def require_user
-    # Restrict actions of user depending if they are logged in
+    # Restrict actions of user depending if they are logged in or not
     if !logged_in?
-      flash[:danger] = "You must login to performe this action"
+      flash[:danger] = "You must login to perform this action"
       redirect_to root_path
     end
   end

@@ -1,6 +1,10 @@
 class ArticlesController < ApplicationController
-  #this action calls the set_article method for only edit, update, show, destroy actions
+  #this action calls the set_article & require_user method for only edit, update, show, destroy actions
   before_action :set_article, only: [:edit, :update, :show, :destroy]
+  #this action calls the require_user method except, index and show need loggedin user for all other actions
+  before_action :require_user, except: [:index, :show]
+  
+  before_action :require_same_user, only: [:edit, :update, :destroy]
   
    #this method captures all articles created
   def index
@@ -16,10 +20,10 @@ class ArticlesController < ApplicationController
   def edit
   end
   
-  #this method creates new article from params; creates flash msg and redirect or renders
+  #this method creates new article from params; checks current_user and creates flash msg and redirect or renders
   def create
     @article = Article.new(article_params)
-    @article.user = User.current_user
+    @article.user = current_user
     if @article.save
       flash[:success] = "Article was created succesfully!"
       redirect_to article_path(@article)
@@ -60,5 +64,13 @@ class ArticlesController < ApplicationController
   #this method grabs article params
     def article_params
       params.require(:article).permit(:title, :description)
+    end
+    
+    #method prevents other users from edit, destroy other users articles, checks in the before_action
+    def require_same_user
+      if current_user != @article.user
+        flash[:danger] = "You can only update your own articles!"
+        redirect_to root_path
+      end
     end
 end
