@@ -47,6 +47,7 @@ class ArticlesController < ApplicationController
   #this method show articles from params by id via call action set_article
   def show
     
+    
   end
   
   #this method delete's articles from params by id via call action set_article
