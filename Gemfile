@@ -42,7 +42,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :production do
-  gem 'pg','~> 0.11'
+  gem 'pg','~> 0.21'
   gem 'rails_12factor'
 end
 
