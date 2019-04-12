@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   
    #this method captures all articles created
   def index
-   @article = Article.paginate(page: params[:page], per_page: 5)
+   @articles = Article.paginate(page: params[:page], per_page: 5)
   end
   
   #this method creates new article array
