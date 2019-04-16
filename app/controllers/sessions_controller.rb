@@ -24,7 +24,5 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     flash[:success] = "See you soon! You are logged out"
     redirect_to articles_path
-    
   end
-  
 end

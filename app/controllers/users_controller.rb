@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update, :show]
   before_action :require_same_user, only: [:edit, :update]
+  before_action :require_signup, only: [:new]
+  
   
   def index
     @users = User.paginate(page: params[:page], per_page: 5)
@@ -54,5 +56,12 @@ class UsersController < ApplicationController
         flash[:danger] = "You can only update when logged into your own account!"
         redirect_to root_path
     end
+  end
+  #method ensures users are not able to signup if currently logged in, called by the before action
+  def require_signup
+    if logged_in? && current_user != @user
+        flash[:warning] = "Sorry, you are alredy a logged in user!"
+        redirect_to root_path
+    end  
   end
 end
