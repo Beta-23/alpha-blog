@@ -60,7 +60,7 @@ class UsersController < ApplicationController
   #method ensures users are not able to signup if currently logged in, called by the before action
   def require_signup
     if logged_in? && current_user != @user
-        flash[:warning] = "Sorry, you are alredy a logged in user!"
+        flash[:warning] = "Sorry, you are already a logged in user!"
         redirect_to root_path
     end  
   end
