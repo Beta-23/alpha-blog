@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-#user ERD has many articles
-  has_many :articles
+#user ERD has many articles and destroy all articles
+  has_many :articles, dependent: :destroy
 #this method converts the user email in lowercase before hittig the database
   before_save { self.email = email.downcase }
 # vlaidates database username, checks for unique username and checks for case sensitive username and gives min and max required

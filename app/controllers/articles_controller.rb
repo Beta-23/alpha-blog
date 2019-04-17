@@ -70,7 +70,7 @@ class ArticlesController < ApplicationController
     
     #method prevents other users from edit, destroy other users articles, checks in the before_action
     def require_same_user
-      if current_user != @article.user
+      if current_user != @article.user and !current_user.admin?
         flash[:danger] = "You can only update your own articles!"
         redirect_to root_path
       end
