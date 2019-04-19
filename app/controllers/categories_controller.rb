@@ -32,7 +32,7 @@ class CategoriesController < ApplicationController
   
   def require_admin
     if !logged_in? || (logged_in? && !current_user.admin?)
-      flash[:warning] = "Contact Administrator for access!"
+      flash[:warning] = "Contact Administrator for action!"
       redirect_to categories_path
     end
   end
