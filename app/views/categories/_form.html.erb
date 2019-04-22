@@ -1,0 +1,26 @@
+<%= render 'shared/errors', obj: @category %>
+    <!--This is a call to the form_for view helper with the instance variable representing the user object.-->
+    <!--The html hash has a key of :html and contains the set of attributes and their values which will be added to the form markup. The class of the form will be "form-horizontal" and the role will be "form".-->
+<%= form_for(@category, :html=> {class: "form-horizontal", role: "form"}) do |f| %>
+    <div class='form-group'>
+      <div class='control-label col-sm-2'>
+            <%= f.label :name %> 
+      </div>
+          <div class='col-sm-8'>
+            <%= f.text_field :name, class: "form-control", placeholder: "Category Name", autofocus: true %>
+          </div>
+    </div>
+        <br />
+        
+    <div class='form-group'>
+      <div class='col-sm-offset-2 col-sm-10'>
+        <!--#this method checks if new user or not to display correct template-->
+      <%= f.submit class: "btn btn-primary btn-lg" %>
+      </div>
+    </div> 
+  
+  <% end %>
+  
+  <div class='col-xs-4 col-xs-offset-4'>
+        [ <%= link_to "Cancel and Return to Archives", articles_path %> ]
+  </div>
