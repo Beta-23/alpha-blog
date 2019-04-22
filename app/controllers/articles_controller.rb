@@ -65,7 +65,7 @@ class ArticlesController < ApplicationController
   
   #this method grabs article params
     def article_params
-      params.require(:article).permit(:title, :description)
+      params.require(:article).permit(:title, :description, category_ids: [])
     end
     
     #method prevents other users from edit, destroy other users articles, checks in the before_action
