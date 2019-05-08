@@ -60,11 +60,12 @@ class UsersController < ApplicationController
   end
   
   def require_same_user
-    if current_user != @user && !current_user.admin?
+      if !logged_in? || (current_user != @user && !current_user.admin?)
         flash[:danger] = "You can only update when logged into your own account!"
         redirect_to root_path
-    end
+      end
   end
+  
   #method ensures users are not able to signup if currently logged in, called by the before action
   def require_signup
     if logged_in? && current_user != @user
@@ -74,7 +75,7 @@ class UsersController < ApplicationController
   end
   
   def require_admin
-    if logged_in? && !current_user.admin?
+    if !logged_in? && !current_user.admin?
         flash[:warning] = "Only admin can perform this action!"
         redirect_to root_path
     end    
