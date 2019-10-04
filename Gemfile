@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'ruby'
-gem 'nokogiri'
+gem "nokogiri", ">= 1.10.4"
 gem 'rack', '~> 2.0.1'
 gem 'rspec'
 gem 'rails-controller-testing'
