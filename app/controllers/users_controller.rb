@@ -31,8 +31,7 @@ class UsersController < ApplicationController
     if @user = User.find(params[:id])
       flash[:success] = "Profile updated successfully!"
       redirect_to articles_path
-      
-      else
+    else
         render 'edit'
     end
   end
