@@ -110,7 +110,7 @@ GEM
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     pg (0.21.0)
-    rack (2.0.9)
+    rack (2.1.4)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.0.3.1)
@@ -225,7 +225,7 @@ DEPENDENCIES
   jquery-rails (>= 4.2.0)
   nokogiri (>= 1.10.4)
   pg (~> 0.21)
-  rack (~> 2.0.8)
+  rack (~> 2.1.4)
   rails
   rails-controller-testing
   rails_12factor
