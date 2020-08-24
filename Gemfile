@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'ruby'
 gem "nokogiri", ">= 1.10.4"
-gem 'rack', '~> 2.0.8'
+gem 'rack', '~> 2.1.4'
 gem 'rspec'
 gem 'rails-controller-testing'
 gem "activesupport"
