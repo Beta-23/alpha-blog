@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'ruby'
 gem "nokogiri", ">= 1.10.4"
-gem 'rack', '~> 2.1.4'
+gem 'rack', '~> 2.2', '>= 2.2.3'
 gem 'rspec'
 gem 'rails-controller-testing'
 gem "activesupport"
@@ -10,9 +10,11 @@ gem "websocket-extensions"
 gem "actionpack"
 gem "activestorage"
 gem "actionview"
+gem "json", ">= 2.3.0"
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails'
+gem 'rails', '~> 6.0'
 # Use sqlite3 as the database for Active Record
 gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate', '3.1.5'
@@ -36,7 +38,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'sdoc', '~> 1.1', group: :doc
 
 gem 'hirb', '~> 0.7.3'
 # Use ActiveModel has_secure_password
