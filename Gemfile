@@ -9,7 +9,7 @@ gem "activesupport"
 gem "websocket-extensions"
 gem "actionpack"
 gem "activestorage"
-gem "actionview"
+gem 'actionview'
 gem "json", ">= 2.3.0"
 
 
